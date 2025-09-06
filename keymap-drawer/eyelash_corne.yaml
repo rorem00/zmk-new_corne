@@ -44,13 +44,13 @@ layers:
   - .
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:keyboard-return$$', h: NUMBER and SYMBOL}
+  - {t: '$$mdi:keyboard-space$$', h: NUMBER and SYMBOL}
   - {t: '$$mdi:keyboard-esc$$', h: CONTROL}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-space$$', h: FUNCTION}
+  - {t: '$$mdi:keyboard-return$$', h: FUNCTION}
   - {t: '$$mdi:apple-keyboard-option$$', h: CONTROL}
   NUMBER and SYMBOL:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '`', s: '~'}
   - '!'
   - '?'
   - {t: '[', s: '{'}
@@ -63,7 +63,7 @@ layers:
   - {t: '9', s: (}
   - +
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '~'
   - '@'
   - '#'
   - '{'
