@@ -44,31 +44,31 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-tab$$
-  - {t: '$$mdi:keyboard-space$$', h: NUMBER and SYMBOL}
+  - {t: '$$mdi:keyboard-space$$', h: number}
   - {t: '$$mdi:keyboard-return$$', h: CONTROL}
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-space$$', h: FUNCTION}
+  - {t: '$$mdi:backspace$$', h: FUNCTION}
+  - {t: '$$mdi:keyboard-space$$', h: symbol}
   - $$mdi:apple-keyboard-option$$
-  NUMBER and SYMBOL:
-  - {t: '`', s: '~'}
-  - '!'
-  - '?'
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - '|'
+  number:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - +
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - '*'
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - '~'
-  - '@'
-  - '#'
-  - '{'
-  - '}'
-  - {t: \, s: '|'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -78,11 +78,11 @@ layers:
   - '6'
   - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $
-  - '%'
-  - '&'
-  - (
-  - )
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -98,6 +98,55 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '0', s: )}
   - .
+  symbol:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '`', s: '~'}
+  - '!'
+  - '?'
+  - '|'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '~'
+  - '@'
+  - '#'
+  - {t: \, s: '|'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '%'
+  - $
+  - '&'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   CONTROL:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -193,8 +242,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [3, 4]
@@ -211,3 +260,9 @@ combos:
   k: _
 - p: [26, 25]
   k: {t: '''', s: '"'}
+- p: [5, 4]
+  k: {t: ']', s: '}'}
+- p: [17, 18]
+  k: '}'
+- p: [32, 33]
+  k: )
