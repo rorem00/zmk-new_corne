@@ -87,6 +87,21 @@
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <26 25>;
         };
+
+        bracket_closed {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <5 4>;
+        };
+
+        brace_closed {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <17 18>;
+        };
+
+        parenthesis_closed {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <32 33>;
+        };
     };
 
     keymap {
@@ -95,20 +110,29 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp LEFT_WIN  &kp Q  &kp W           &kp E        &kp R             &kp T                          &trans          &kp Y          &kp U             &kp I          &kp O           &kp P      &trans
-&trans        &kp A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                  &trans  &trans  &trans  &kp H          &mt LEFT_SHIFT J  &mt LCTRL K    &mt LEFT_ALT L  &kp SEMI   &trans
-&trans        &kp Z  &kp X           &kp C        &kp V             &kp B        &trans            &trans          &kp N          &kp M             &kp COMMA      &kp PERIOD      &kp SLASH  &trans
-                                     &kp TAB      &lt 1 SPACE       &lt 2 ENTER                                    &kp BACKSPACE  &lt 3 SPACE       &kp RIGHT_ALT
+&kp LEFT_WIN  &kp Q  &kp W           &kp E        &kp R             &kp T                          &trans          &kp Y            &kp U             &kp I          &kp O           &kp P      &trans
+&trans        &kp A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                  &trans  &trans  &trans  &kp H            &mt LEFT_SHIFT J  &mt LCTRL K    &mt LEFT_ALT L  &kp SEMI   &trans
+&trans        &kp Z  &kp X           &kp C        &kp V             &kp B        &trans            &trans          &kp N            &kp M             &kp COMMA      &kp PERIOD      &kp SLASH  &trans
+                                     &kp TAB      &lt 1 SPACE       &lt 3 ENTER                                    &lt 4 BACKSPACE  &lt 2 SPACE       &kp RIGHT_ALT
             >;
         };
 
-        equation {
-            display-name = "NUMBER and SYMBOL";
+        number {
+            display-name = "number";
             bindings = <
-&kp GRAVE   &kp EXCLAMATION  &kp QUESTION   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE                         &trans          &kp PLUS       &kp N7        &kp N8        &kp N9        &kp ASTERISK  &kp BSPC
-&kp TILDE   &kp AT_SIGN      &kp HASH       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH            &trans  &trans  &trans  &kp MINUS      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH     &trans
-&kp DOLLAR  &kp PERCENT      &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans         &trans            &trans          &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
-                                            &trans                &trans                 &trans                                           &kp BACKSPACE  &kp N0        &kp PERIOD
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &kp PLUS       &kp N7        &kp N8        &kp N9        &kp ASTERISK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp MINUS      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
+                        &trans  &trans  &trans                                    &kp BACKSPACE  &kp N0        &kp PERIOD
+            >;
+        };
+
+        symbol {
+            bindings = <
+&trans  &trans  &kp GRAVE    &kp EXCLAMATION  &kp QUESTION   &kp PIPE                         &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp TILDE    &kp AT_SIGN      &kp HASH       &kp BACKSLASH            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp PERCENT  &kp DOLLAR       &kp AMPERSAND  &trans         &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                             &trans           &trans         &trans                                           &trans  &trans  &trans
             >;
         };
 
