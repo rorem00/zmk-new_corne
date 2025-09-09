@@ -3,15 +3,15 @@ layers:
   QWERTY:
   - LEFT WIN
   - Q
-  - {t: W, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: E, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: R, h: '$$mdi:apple-keyboard-shift$$'}
+  - W
+  - E
+  - R
   - T
   - {t: '$$mdi:transfer$$', type: trans}
   - Y
-  - {t: U, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: I, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: O, h: '$$mdi:apple-keyboard-option$$'}
+  - U
+  - I
+  - O
   - P
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -31,16 +31,16 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Z
-  - X
-  - C
-  - V
+  - {t: X, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-shift$$'}
   - B
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - N
-  - M
-  - {t: ',', s: <}
-  - .
+  - {t: M, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: ',', h: '$$mdi:apple-keyboard-control$$', s: <}
+  - {t: ., h: '$$mdi:apple-keyboard-option$$'}
   - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-tab$$
