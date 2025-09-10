@@ -26,6 +26,10 @@
 
 &soft_off { hold-time-ms = <2000>; };
 
+&lt { flavor = "balanced"; };
+
+&mt { flavor = "balanced"; };
+
 / {
     behaviors {
         td0: td0 {
@@ -80,7 +84,7 @@
 
         label {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <14 25>;
+            key-positions = <40 39>;
         };
 
         quote {
@@ -110,51 +114,51 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp LEFT_WIN  &kp Q  &kp W           &kp E        &kp R             &kp T                          &trans          &kp Y            &kp U              &kp I            &kp O                &kp P      &trans
-&trans        &kp A  &kp S           &kp D        &kp F             &kp G                  &trans  &trans  &trans  &kp H            &kp J              &kp K            &kp L                &kp SEMI   &trans
-&trans        &kp Z  &mt LEFT_ALT X  &mt LCTRL C  &mt LEFT_SHIFT V  &kp B        &trans            &trans          &kp N            &mt RIGHT_SHIFT M  &mt LCTRL COMMA  &mt LEFT_ALT PERIOD  &kp SLASH  &trans
-                                     &kp TAB      &lt 1 SPACE       &lt 3 ENTER                                    &lt 4 BACKSPACE  &lt 2 SPACE        &kp RIGHT_ALT
+&trans  &kp Q  &kp W        &kp E             &kp R           &kp T                        &trans          &kp Y          &kp U           &kp I             &kp O        &kp P      &trans
+&trans  &kp A  &mt LCTRL S  &mt LEFT_SHIFT D  &mt LEFT_ALT F  &kp G                &trans  &trans  &trans  &kp H          &mt LEFT_ALT J  &mt LEFT_SHIFT K  &mt LCTRL L  &kp SEMI   &trans
+&trans  &kp Z  &kp X        &kp C             &kp V           &kp B      &trans            &trans          &kp N          &kp M           &kp COMMA         &kp PERIOD   &kp SLASH  &trans
+                            &kp LEFT_WIN      &lt 1 SPACE     &lt 3 TAB                                    &kp BACKSPACE  &lt 2 ENTER     &kp RIGHT_ALT
             >;
         };
 
         number {
             display-name = "number";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &kp PLUS       &kp N7        &kp N8        &kp N9        &kp ASTERISK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp MINUS      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
-                        &trans  &trans  &trans                                    &kp BACKSPACE  &kp N0        &kp PERIOD
-            >;
-        };
-
-        symbol {
-            bindings = <
-&trans  &trans  &kp GRAVE    &kp EXCLAMATION  &kp QUESTION   &kp PIPE                         &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp TILDE    &kp AT_SIGN      &kp HASH       &kp BACKSLASH            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp PERCENT  &kp DOLLAR       &kp AMPERSAND  &trans         &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                             &trans           &trans         &trans                                           &trans  &trans  &trans
+&trans  &trans  &kp GRAVE    &kp EXCLAMATION  &kp QUESTION   &kp PIPE                                &trans          &kp PLUS       &kp N7        &kp N8        &kp N9        &kp ASTERISK  &trans
+&trans  &trans  &kp TILDE    &kp AT_SIGN      &kp HASH       &kp NON_US_BACKSLASH            &trans  &trans  &trans  &kp MINUS      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH     &trans
+&trans  &trans  &kp PERCENT  &kp DOLLAR       &kp AMPERSAND  &trans                &trans            &trans          &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
+                             &trans           &trans         &trans                                                  &kp BACKSPACE  &kp N0        &kp PERIOD
             >;
         };
 
         control {
             display-name = "CONTROL";
             bindings = <
-&trans  &trans  &trans        &trans     &trans          &trans                    &trans          &trans    &trans    &trans        &trans     &trans  &trans
-&trans  &trans  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans            &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans        &trans     &trans          &trans  &trans            &trans          &trans    &trans    &trans        &trans     &trans  &trans
-                              &trans     &trans          &trans                                    &trans    &trans    &trans
+&trans  &trans  &trans        &trans     &trans          &trans                    &trans          &kp END   &kp PAGE_DOWN  &kp PAGE_UP      &kp HOME   &trans  &trans
+&trans  &trans  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans            &trans  &trans  &trans  &kp LEFT  &kp DOWN       &kp UP           &kp RIGHT  &trans  &trans
+&trans  &trans  &trans        &trans     &trans          &trans  &trans            &trans          &trans    &kp DELETE     &kp PRINTSCREEN  &trans     &trans  &trans
+                              &trans     &trans          &trans                                    &trans    &trans         &trans
             >;
         };
 
         function {
             bindings = <
-&trans  &kp K_MUTE       &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK  &trans                    &trans          &kp F12  &kp F7  &kp F8  &kp F9  &trans  &trans
-&trans  &kp C_VOLUME_UP  &kp INSERT       &kp HOME        &kp PAGE_UP      &trans            &trans  &trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
-&trans  &kp C_VOL_DN     &kp DELETE       &kp END         &kp PAGE_DOWN    &trans  &trans            &trans          &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans
-                                          &trans          &trans           &trans                                    &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &kp F12  &kp F7  &kp F8  &kp F9  &kp C_VOLUME_UP    &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp C_VOLUME_DOWN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &kp F10  &kp F1  &kp F2  &kp F3  &kp K_MUTE         &trans
+                        &trans  &trans  &trans                                    &trans   &trans  &trans
             >;
 
             label = "FUNCTION";
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
         };
     };
 };
