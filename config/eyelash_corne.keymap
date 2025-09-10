@@ -28,7 +28,10 @@
 
 &lt { flavor = "balanced"; };
 
-&mt { flavor = "balanced"; };
+&mt {
+    flavor = "tap-unless-interrupted";
+    tapping-term-ms = <200>;
+};
 
 / {
     behaviors {
