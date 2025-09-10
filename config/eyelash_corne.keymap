@@ -29,8 +29,9 @@
 &lt { flavor = "balanced"; };
 
 &mt {
-    flavor = "tap-unless-interrupted";
+    flavor = "balanced";
     tapping-term-ms = <200>;
+    require-prior-idle-ms = <125>;
 };
 
 / {
