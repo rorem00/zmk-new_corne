@@ -83,12 +83,12 @@
 
         power {
             bindings = <&kp CARET>;
-            key-positions = <10 11>;
+            key-positions = <8 9>;
         };
 
         label {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <40 39>;
+            key-positions = <37 38>;
         };
 
         quote {
@@ -110,6 +110,21 @@
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <32 33>;
         };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <7 8>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <22 23>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <36 37>;
+        };
     };
 
     keymap {
@@ -125,18 +140,18 @@
             >;
         };
 
-        number {
-            display-name = "number";
+        NuSy {
+            display-name = "number and symbol";
             bindings = <
-&trans  &trans  &kp GRAVE    &kp EXCLAMATION  &kp QUESTION   &kp PIPE                                &trans          &kp PLUS       &kp N7        &kp N8        &kp N9        &kp ASTERISK  &trans
-&trans  &trans  &kp TILDE    &kp AT_SIGN      &kp HASH       &kp NON_US_BACKSLASH            &trans  &trans  &trans  &kp MINUS      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH     &trans
-&trans  &trans  &kp PERCENT  &kp DOLLAR       &kp AMPERSAND  &trans                &trans            &trans          &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
-                             &trans           &trans         &trans                                                  &kp BACKSPACE  &kp N0        &kp PERIOD
+&trans  &trans  &kp GRAVE    &kp EXCLAMATION  &kp QUESTION   &kp PIPE                                &trans          &kp ASTERISK  &kp N7        &kp N8        &kp N9        &trans      &trans
+&trans  &trans  &kp TILDE    &kp AT_SIGN      &kp HASH       &kp NON_US_BACKSLASH            &trans  &trans  &trans  &kp SLASH     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans      &trans
+&trans  &trans  &kp PERCENT  &kp DOLLAR       &kp AMPERSAND  &trans                &trans            &trans          &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans
+                             &trans           &trans         &trans                                                  &trans        &trans        &trans
             >;
         };
 
-        control {
-            display-name = "CONTROL";
+        Nav {
+            display-name = "navigator";
             bindings = <
 &trans  &trans  &trans     &trans          &trans        &trans                    &trans          &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP      &kp END       &trans  &trans
 &trans  &trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_ALT  &trans            &trans  &trans  &trans  &kp LEFT  &kp DOWN       &kp UP           &kp RIGHT     &trans  &trans
@@ -145,7 +160,7 @@
             >;
         };
 
-        function {
+        Func {
             bindings = <
 &trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp C_VOLUME_UP                      &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp C_VOLUME_DOWN            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -153,7 +168,7 @@
                          &trans  &trans  &trans                                               &trans  &trans  &trans
             >;
 
-            label = "FUNCTION";
+            label = "functions";
         };
     };
 };
