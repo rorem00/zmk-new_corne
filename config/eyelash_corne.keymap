@@ -118,10 +118,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&trans  &kp Q  &kp W        &kp E             &kp R           &kp T                        &trans          &kp Y          &kp U           &kp I             &kp O        &kp P      &trans
-&trans  &kp A  &mt LCTRL S  &mt LEFT_SHIFT D  &mt LEFT_ALT F  &kp G                &trans  &trans  &trans  &kp H          &mt LEFT_ALT J  &mt LEFT_SHIFT K  &mt LCTRL L  &kp SEMI   &trans
-&trans  &kp Z  &kp X        &kp C             &kp V           &kp B      &trans            &trans          &kp N          &kp M           &kp COMMA         &kp PERIOD   &kp SLASH  &trans
-                            &kp LEFT_WIN      &lt 1 SPACE     &lt 3 TAB                                    &kp BACKSPACE  &lt 2 ENTER     &kp RIGHT_ALT
+&trans  &kp Q  &kp W        &kp E             &kp R           &kp T                        &trans          &kp Y        &kp U           &kp I             &kp O        &kp P      &trans
+&trans  &kp A  &mt LCTRL S  &mt LEFT_SHIFT D  &mt LEFT_ALT F  &kp G                &trans  &trans  &trans  &kp H        &mt LEFT_ALT J  &mt LEFT_SHIFT K  &mt LCTRL L  &kp SEMI   &trans
+&trans  &kp Z  &kp X        &kp C             &kp V           &kp B      &trans            &trans          &kp N        &kp M           &kp COMMA         &kp PERIOD   &kp SLASH  &trans
+                            &kp LEFT_WIN      &lt 1 SPACE     &lt 3 TAB                                    &lt 2 ENTER  &kp BACKSPACE   &kp RIGHT_ALT
             >;
         };
 
@@ -138,7 +138,7 @@
         control {
             display-name = "CONTROL";
             bindings = <
-&trans  &trans  &trans     &trans          &trans        &trans                    &trans          &kp END   &kp PAGE_DOWN  &kp PAGE_UP      &kp HOME      &trans  &trans
+&trans  &trans  &trans     &trans          &trans        &trans                    &trans          &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP      &kp END       &trans  &trans
 &trans  &trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_ALT  &trans            &trans  &trans  &trans  &kp LEFT  &kp DOWN       &kp UP           &kp RIGHT     &trans  &trans
 &trans  &trans  &trans     &trans          &trans        &trans  &trans            &trans          &trans    &kp DELETE     &kp PRINTSCREEN  &kp CAPSLOCK  &trans  &trans
                            &trans          &trans        &trans                                    &trans    &trans         &trans
@@ -149,7 +149,7 @@
             bindings = <
 &trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp C_VOLUME_UP                      &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp C_VOLUME_DOWN            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp K_MUTE         &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp C_MUTE         &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                          &trans  &trans  &trans                                               &trans  &trans  &trans
             >;
 
