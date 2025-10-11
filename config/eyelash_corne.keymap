@@ -26,11 +26,14 @@
 
 &soft_off { hold-time-ms = <2000>; };
 
-&lt { flavor = "balanced"; };
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <150>;
+};
 
 &mt {
     flavor = "balanced";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <150>;
     require-prior-idle-ms = <125>;
 };
 
@@ -133,29 +136,20 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&trans  &kp Q        &kp W             &kp E         &kp R           &kp T                        &trans          &kp Y        &kp U          &kp I          &kp O         &kp P                &tog 4
-&trans  &mt LCTRL A  &mt LEFT_SHIFT S  &kp D         &mt LEFT_ALT F  &kp G                &trans  &trans  &trans  &kp H        &kp J          &kp K          &mt LSHIFT L  &mt LCTRL SEMICOLON  &trans
-&trans  &kp Z        &kp X             &kp C         &kp V           &kp B      &trans            &trans          &kp N        &kp M          &kp COMMA      &kp PERIOD    &kp SLASH            &trans
-                                       &kp LEFT_WIN  &lt 2 SPACE     &lt 3 TAB                                    &lt 1 ENTER  &kp BACKSPACE  &kp RIGHT_ALT
+&trans  &kp Q        &kp W             &kp E         &kp R           &kp T                        &trans          &kp Y        &kp U           &kp I          &kp O         &kp P                &tog 4
+&trans  &mt LCTRL A  &mt LEFT_SHIFT S  &lt 1 D       &mt LEFT_ALT F  &kp G                &trans  &trans  &trans  &kp H        &mt LEFT_ALT J  &lt 1 K        &mt LSHIFT L  &mt LCTRL SEMICOLON  &kp CAPS
+&trans  &kp Z        &kp X             &kp C         &kp V           &kp B      &trans            &trans          &kp N        &kp M           &kp COMMA      &kp PERIOD    &kp SLASH            &trans
+                                       &kp LEFT_WIN  &lt 1 SPACE     &lt 2 TAB                                    &lt 3 ENTER  &kp BACKSPACE   &kp RIGHT_ALT
             >;
         };
 
-        Num {
+        NuSy {
+            display-name = "number and symbol";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &kp ASTERISK  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans
-                        &trans  &trans  &trans                                    &trans        &trans        &trans
-            >;
-        };
-
-        Symbol {
-            display-name = "symbol";
-            bindings = <
-&trans  &trans  &kp GRAVE    &kp EXCLAMATION  &kp QUESTION   &kp PIPE                                &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp TILDE    &kp AT_SIGN      &kp HASH       &kp NON_US_BACKSLASH            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp PERCENT  &kp DOLLAR       &kp AMPERSAND  &trans                &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                             &trans           &trans         &trans                                                  &trans  &trans  &trans
+&trans  &trans  &kp GRAVE    &kp EXCLAMATION  &kp QUESTION   &kp PIPE                                &trans          &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans      &trans
+&trans  &trans  &kp TILDE    &kp AT_SIGN      &kp HASH       &kp NON_US_BACKSLASH            &trans  &trans  &trans  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans      &trans
+&trans  &trans  &kp PERCENT  &kp DOLLAR       &kp AMPERSAND  &trans                &trans            &trans          &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans
+                             &trans           &trans         &trans                                                  &trans        &trans        &trans
             >;
         };
 
@@ -169,7 +163,16 @@
             >;
         };
 
-        layer_4 {
+        Nav {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &kp HOME        &kp PAGE_UP     &kp PAGE_DOWN    &kp END          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans          &kp DELETE      &kp PRINTSCREEN  &trans           &trans  &trans
+                        &trans  &trans  &trans                                    &trans          &trans          &trans
+            >;
+        };
+
+        Game {
             bindings = <
 &trans  &kp Q  &kp W  &kp E   &kp R   &kp T                     &trans          &kp Y   &kp U   &kp I      &kp O       &kp P          &trans
 &trans  &kp A  &kp S  &kp D   &kp F   &kp G             &trans  &trans  &trans  &kp H   &kp J   &kp K      &kp L       &kp SEMICOLON  &trans
