@@ -45,6 +45,54 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        mt_left: mt_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mod/tap for left keys";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <7 22 36 37 23 8 9 10 11 12 24 25 26 27 38 39 40 41>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <125>;
+        };
+
+        mt_right: mt_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mod/tap for right keys";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33>;
+        };
+
+        lt_left: lt_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "layer/tap for left keys";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41>;
+        };
+
+        lt_right: lt_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "layer/tap for right keys";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -136,36 +184,36 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&trans  &kp Q        &kp W             &kp E         &kp R           &kp T                        &trans          &kp Y        &kp U           &kp I          &kp O         &kp P                &tog 4
-&trans  &mt LCTRL A  &mt LEFT_SHIFT S  &lt 1 D       &mt LEFT_ALT F  &kp G                &trans  &trans  &trans  &kp H        &mt LEFT_ALT J  &lt 1 K        &mt LSHIFT L  &mt LCTRL SEMICOLON  &kp CAPS
-&trans  &kp Z        &kp X             &kp C         &kp V           &kp B      &trans            &trans          &kp N        &kp M           &kp COMMA      &kp PERIOD    &kp SLASH            &trans
-                                       &kp LEFT_WIN  &kp SPACE       &lt 2 TAB                                    &lt 3 ENTER  &kp BACKSPACE   &kp RIGHT_ALT
+&trans  &kp Q             &kp W                  &kp E         &kp R                &kp T                        &trans          &kp Y        &kp U                 &kp I          &kp O               &kp P                      &tog 4
+&trans  &mt_left LCTRL A  &mt_left LEFT_SHIFT S  &lt_left 1 D  &mt_left LEFT_ALT F  &kp G                &trans  &trans  &trans  &kp H        &mt_right LEFT_ALT J  &lt_right 1 K  &mt_right LSHIFT L  &mt_right LCTRL SEMICOLON  &kp CAPS
+&trans  &kp Z             &kp X                  &kp C         &kp V                &kp B      &trans            &trans          &kp N        &kp M                 &kp COMMA      &kp PERIOD          &kp SLASH                  &trans
+                                                 &kp LEFT_WIN  &kp SPACE            &lt 2 TAB                                    &lt 3 ENTER  &kp BACKSPACE         &kp RIGHT_ALT
             >;
         };
 
         NuSy {
             display-name = "number and symbol";
             bindings = <
-&trans  &trans  &kp GRAVE    &kp EXCLAMATION  &kp QUESTION   &kp PIPE                                &trans          &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans      &trans
-&trans  &trans  &kp TILDE    &kp AT_SIGN      &kp HASH       &kp NON_US_BACKSLASH            &trans  &trans  &trans  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans      &trans
-&trans  &trans  &kp PERCENT  &kp DOLLAR       &kp AMPERSAND  &trans                &trans            &trans          &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans
-                             &trans           &trans         &trans                                                  &trans        &trans        &trans
+&trans  &trans  &kp GRAVE    &kp EXCLAMATION  &kp QUESTION   &kp PIPE                                &trans          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK  &trans  &trans
+&trans  &trans  &kp TILDE    &kp AT_SIGN      &kp HASH       &kp NON_US_BACKSLASH            &trans  &trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH     &trans  &trans
+&trans  &trans  &kp PERCENT  &kp DOLLAR       &kp AMPERSAND  &trans                &trans            &trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans  &trans
+                             &trans           &trans         &trans                                                  &kp NUMBER_0  &trans        &trans
             >;
         };
 
         Func {
             display-name = "function";
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp C_VOLUME_UP                      &trans          &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP      &kp END       &trans  &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp C_VOLUME_DOWN            &trans  &trans  &trans  &kp LEFT  &kp DOWN       &kp UP           &kp RIGHT     &trans  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp C_MUTE         &trans            &trans          &trans    &kp DELETE     &kp PRINTSCREEN  &kp CAPSLOCK  &trans  &trans
-                         &trans  &trans  &trans                                               &trans    &trans         &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp C_VOLUME_UP                      &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp C_VOLUME_DOWN            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp C_MUTE         &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans  &trans                                               &trans  &trans  &trans
             >;
         };
 
         Nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &kp HOME        &kp PAGE_UP     &kp PAGE_DOWN    &kp END          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP      &kp END          &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans          &kp DELETE      &kp PRINTSCREEN  &trans           &trans  &trans
                         &trans  &trans  &trans                                    &trans          &trans          &trans
