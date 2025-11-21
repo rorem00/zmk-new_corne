@@ -52,9 +52,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <7 22 36 37 23 8 9 10 11 12 24 25 26 27 38 39 40 41 47 46 45 44 43 42>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <125>;
             require-prior-idle-ms = <125>;
         };
 
@@ -64,9 +64,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <125>;
             require-prior-idle-ms = <125>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44 45 46 47>;
         };
 
@@ -76,9 +76,9 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <125>;
             require-prior-idle-ms = <125>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 42 43 44 45 46 47>;
         };
 
@@ -88,9 +88,9 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <125>;
             require-prior-idle-ms = <125>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44 45 46 47>;
         };
     };
@@ -132,21 +132,6 @@
             key-positions = <1 2>;
         };
 
-        power {
-            bindings = <&kp CARET>;
-            key-positions = <8 9>;
-        };
-
-        label {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <37 38>;
-        };
-
-        quote {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <26 25>;
-        };
-
         bracket_closed {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <5 4>;
@@ -161,21 +146,6 @@
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <32 33>;
         };
-
-        plus {
-            bindings = <&kp PLUS>;
-            key-positions = <7 8>;
-        };
-
-        minus {
-            bindings = <&kp MINUS>;
-            key-positions = <22 23>;
-        };
-
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <36 37>;
-        };
     };
 
     keymap {
@@ -184,20 +154,20 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&trans  &kp Q             &kp W                  &kp E         &kp R                &kp T                        &trans          &kp Y        &kp U                 &kp I          &kp O               &kp P                      &tog 4
-&trans  &mt_left LCTRL A  &mt_left LEFT_SHIFT S  &lt_left 1 D  &mt_left LEFT_ALT F  &kp G                &trans  &trans  &trans  &kp H        &mt_right LEFT_ALT J  &lt_right 1 K  &mt_right LSHIFT L  &mt_right LCTRL SEMICOLON  &kp CAPS
-&trans  &kp Z             &kp X                  &kp C         &kp V                &kp B      &trans            &trans          &kp N        &kp M                 &kp COMMA      &kp PERIOD          &kp SLASH                  &trans
-                                                 &kp LEFT_WIN  &kp SPACE            &lt 2 TAB                                    &lt 3 ENTER  &kp BACKSPACE         &kp RIGHT_ALT
+&tog 4        &kp Q             &kp W                  &kp E         &kp R                &kp T                        &trans          &kp Y        &kp U                 &kp I          &kp O               &kp P                      &trans
+&kp CAPSLOCK  &mt_left LCTRL A  &mt_left LEFT_SHIFT S  &lt_left 1 D  &mt_left LEFT_ALT F  &kp G                &trans  &trans  &trans  &kp H        &mt_right LEFT_ALT J  &lt_right 1 K  &mt_right LSHIFT L  &mt_right LCTRL SEMICOLON  &trans
+&trans        &kp Z             &kp X                  &kp C         &kp V                &kp B      &trans            &trans          &kp N        &kp M                 &kp COMMA      &kp PERIOD          &kp SLASH                  &trans
+                                                       &kp LEFT_WIN  &kp SPACE            &lt 2 TAB                                    &lt 3 ENTER  &kp BACKSPACE         &kp RIGHT_ALT
             >;
         };
 
         NuSy {
             display-name = "number and symbol";
             bindings = <
-&trans  &trans  &kp GRAVE    &kp EXCLAMATION  &kp QUESTION   &kp PIPE                                &trans          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK  &trans  &trans
-&trans  &trans  &kp TILDE    &kp AT_SIGN      &kp HASH       &kp NON_US_BACKSLASH            &trans  &trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH     &trans  &trans
-&trans  &trans  &kp PERCENT  &kp DOLLAR       &kp AMPERSAND  &trans                &trans            &trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans  &trans
-                             &trans           &trans         &trans                                                  &kp NUMBER_0  &trans        &trans
+&trans  &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK                    &trans          &kp CARET       &kp EXCLAMATION  &kp PLUS       &kp ASTERISK      &kp SINGLE_QUOTE   &trans
+&trans  &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH               &trans  &trans  &trans  &kp AT_SIGN     &kp QUESTION     &kp MINUS      &kp SLASH         &kp COLON          &trans
+&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans            &trans          &kp UNDERSCORE  &kp EQUAL        &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &trans
+                                    &trans        &trans        &trans                                          &trans          &trans           &trans
             >;
         };
 
@@ -222,7 +192,7 @@
 
         Game {
             bindings = <
-&trans          &kp Q  &kp W  &kp E   &kp R   &kp T                     &trans          &kp Y   &kp U   &kp I      &kp O       &kp P          &trans
+&kp TAB         &kp Q  &kp W  &kp E   &kp R   &kp T                     &trans          &kp Y   &kp U   &kp I      &kp O       &kp P          &trans
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D   &kp F   &kp G             &trans  &trans  &trans  &kp H   &kp J   &kp K      &kp L       &kp SEMICOLON  &trans
 &kp LCTRL       &kp Z  &kp X  &kp C   &kp V   &kp B   &trans            &trans          &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &trans
                               &trans  &trans  &trans                                    &trans  &trans  &trans
