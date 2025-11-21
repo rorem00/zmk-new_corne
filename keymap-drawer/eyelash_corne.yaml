@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Game, h: toggle}
   - Q
   - W
   - E
@@ -13,8 +13,8 @@ layers:
   - I
   - O
   - P
-  - {t: Game, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-caps$$
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: D, h: number and symbol}
@@ -28,7 +28,7 @@ layers:
   - {t: K, h: number and symbol}
   - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: ;, h: '$$mdi:apple-keyboard-control$$', s: ':'}
-  - $$mdi:apple-keyboard-caps$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Z
   - X
@@ -51,51 +51,51 @@ layers:
   - $$mdi:apple-keyboard-option$$
   number and symbol:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '`', s: '~'}
-  - '!'
-  - '?'
-  - '|'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - +
   - '7'
   - '8'
   - '9'
   - '*'
   - {t: '$$mdi:transfer$$', type: trans}
+  - ^
+  - '!'
+  - +
+  - '*'
+  - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '~'
-  - {t: '@', type: held}
-  - '#'
-  - \
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '-', s: _}
   - '4'
-  - {t: '5', s: '%'}
-  - {t: '6', type: held alternate}
+  - {t: '5', type: held}
+  - '6'
   - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - '@'
+  - '?'
+  - {t: '-', s: _, type: held alternate}
+  - {t: /, s: '?'}
+  - ':'
   - {t: '$$mdi:transfer$$', type: trans}
-  - '%'
-  - $
-  - '&'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '0'
   - '1'
   - '2'
   - '3'
   - .
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - _
+  - {t: '=', s: +}
+  - <
+  - '>'
+  - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '0'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   function:
@@ -197,7 +197,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Game:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
@@ -254,21 +254,9 @@ combos:
   k: (
 - p: [1, 2]
   k: $$mdi:keyboard-esc$$
-- p: [8, 9]
-  k: ^
-- p: [37, 38]
-  k: _
-- p: [26, 25]
-  k: {t: '''', s: '"'}
 - p: [5, 4]
   k: {t: ']', s: '}'}
 - p: [17, 18]
   k: '}'
 - p: [32, 33]
   k: )
-- p: [7, 8]
-  k: +
-- p: [22, 23]
-  k: {t: '-', s: _}
-- p: [36, 37]
-  k: {t: '=', s: +}
