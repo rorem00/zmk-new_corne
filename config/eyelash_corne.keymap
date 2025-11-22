@@ -52,7 +52,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             hold-trigger-key-positions = <7 22 36 37 23 8 9 10 11 12 24 25 26 27 38 39 40 41 47 46 45 44 43 42>;
             tapping-term-ms = <125>;
             require-prior-idle-ms = <125>;
@@ -66,7 +66,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <125>;
             require-prior-idle-ms = <125>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44 45 46 47>;
         };
 
@@ -78,7 +78,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <125>;
             require-prior-idle-ms = <125>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 42 43 44 45 46 47>;
         };
 
@@ -90,7 +90,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <125>;
             require-prior-idle-ms = <125>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44 45 46 47>;
         };
     };
