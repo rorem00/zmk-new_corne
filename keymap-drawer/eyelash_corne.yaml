@@ -57,11 +57,11 @@ layers:
   - '9'
   - '*'
   - {t: '$$mdi:transfer$$', type: trans}
-  - ^
+  - '~'
   - '!'
   - +
   - '*'
-  - {t: '''', s: '"'}
+  - '|'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '-', s: _}
@@ -86,11 +86,11 @@ layers:
   - .
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - _
+  - {t: '`', s: '~'}
   - {t: '=', s: +}
   - <
   - '>'
-  - '"'
+  - \
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -248,15 +248,25 @@ layers:
 combos:
 - p: [3, 4]
   k: {t: '[', s: '{'}
+  l: [number and symbol]
 - p: [16, 17]
   k: '{'
+  l: [number and symbol]
 - p: [31, 32]
   k: (
+  l: [number and symbol]
 - p: [1, 2]
   k: $$mdi:keyboard-esc$$
 - p: [5, 4]
   k: {t: ']', s: '}'}
+  l: [number and symbol]
 - p: [17, 18]
   k: '}'
+  l: [number and symbol]
 - p: [32, 33]
   k: )
+  l: [number and symbol]
+- p: [8, 9]
+  k: ^
+- p: [37, 38]
+  k: _
