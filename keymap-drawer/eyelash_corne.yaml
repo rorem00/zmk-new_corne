@@ -268,5 +268,7 @@ combos:
   l: [number and symbol]
 - p: [8, 9]
   k: ^
+  l: [number and symbol]
 - p: [37, 38]
   k: _
+  l: [number and symbol]
