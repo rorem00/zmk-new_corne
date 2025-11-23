@@ -166,11 +166,13 @@
         superscript {
             bindings = <&kp CARET>;
             key-positions = <8 9>;
+            layers = <1>;
         };
 
         subscript {
             bindings = <&kp UNDERSCORE>;
             key-positions = <37 38>;
+            layers = <1>;
         };
     };
 
