@@ -125,16 +125,19 @@
         Bracket {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <3 4>;
+            layers = <1>;
         };
 
         Brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <16 17>;
+            layers = <1>;
         };
 
         Parenthesis {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <31 32>;
+            layers = <1>;
         };
 
         escape {
@@ -145,16 +148,29 @@
         bracket_closed {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <5 4>;
+            layers = <1>;
         };
 
         brace_closed {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <17 18>;
+            layers = <1>;
         };
 
         parenthesis_closed {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <32 33>;
+            layers = <1>;
+        };
+
+        superscript {
+            bindings = <&kp CARET>;
+            key-positions = <8 9>;
+        };
+
+        subscript {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <37 38>;
         };
     };
 
@@ -174,10 +190,10 @@
         NuSy {
             display-name = "number and symbol";
             bindings = <
-&trans  &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK                    &trans          &kp CARET       &kp EXCLAMATION  &kp PLUS       &kp ASTERISK      &kp SINGLE_QUOTE   &trans
-&trans  &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH               &trans  &trans  &trans  &kp AT_SIGN     &kp QUESTION     &kp MINUS      &kp SLASH         &kp COLON          &trans
-&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans            &trans          &kp UNDERSCORE  &kp EQUAL        &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &trans
-                                    &trans        &trans        &trans                                          &trans          &trans           &trans
+&trans  &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK                    &trans          &kp TILDE    &kp EXCLAMATION  &kp PLUS       &kp ASTERISK      &kp PIPE              &trans
+&trans  &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH               &trans  &trans  &trans  &kp AT_SIGN  &kp QUESTION     &kp MINUS      &kp SLASH         &kp COLON             &trans
+&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans            &trans          &kp GRAVE    &kp EQUAL        &kp LESS_THAN  &kp GREATER_THAN  &kp NON_US_BACKSLASH  &trans
+                                    &trans        &trans        &trans                                          &trans       &trans           &trans
             >;
         };
 
