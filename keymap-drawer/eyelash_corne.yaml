@@ -272,3 +272,5 @@ combos:
 - p: [37, 38]
   k: _
   l: [number and symbol]
+- p: [25, 26]
+  k: {t: '''', s: '"'}
