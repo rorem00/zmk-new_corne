@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - {t: Game, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Game, h: toggle}
   - $$mdi:apple-keyboard-caps$$
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
