@@ -169,7 +169,7 @@
             bindings = <
 &trans  &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK                    &trans          &kp TILDE    &kp EXCLAMATION  &kp PLUS       &kp ASTERISK      &kp PIPE              &trans
 &trans  &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH               &trans  &trans  &trans  &kp AT_SIGN  &kp QUESTION     &kp MINUS      &kp SLASH         &kp COLON             &trans
-&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans            &trans          &trans       &kp EQUAL        &kp LESS_THAN  &kp GREATER_THAN  &kp NON_US_BACKSLASH  &trans
+&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans            &trans          &kp GRAVE    &kp EQUAL        &kp LESS_THAN  &kp GREATER_THAN  &kp NON_US_BACKSLASH  &trans
                                     &trans        &trans        &trans                                          &trans       &trans           &trans
             >;
 
